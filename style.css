@@ -1,0 +1,128 @@
+/* style.css */
+
+/* Menambahkan gambar latar belakang */
+body {
+    font-family: Arial, sans-serif;/* Ganti dengan URL gambar/gif yang ingin digunakan */
+    background-size: cover; /* Ukuran gambar menutupi seluruh layar */
+    background-position: center; /* Gambar berada di tengah layar */
+    background-repeat: no-repeat; /* Tidak mengulang gambar */
+    background-attachment: fixed; /* Background tetap saat scroll */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+  }
+  
+  /* Membuat container sedikit transparan */
+  .container {
+    background-color: rgba(255, 255, 255, 0.8); /* Warna putih dengan 80% opacity (20% transparan) */
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2); /* Sedikit bayangan untuk efek 3D */
+    width: 100%;
+    max-width: 400px;
+    margin: auto;
+  }
+  
+  /* Filter type dropdown */
+  #filter-type {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+  }
+  
+  /* Form styling */
+  #todo-form {
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
+  }
+  
+  #new-task, #task-date, #task-type {
+    flex: 1;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+  }
+  
+  button {
+    padding: 10px;
+    background-color: #28a745;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    flex-shrink: 0;
+  }
+  
+  button:hover {
+    background-color: #218838;
+  }
+  
+  #todo-list {
+    list-style-type: none;
+    padding: 0;
+  }
+  
+  .todo-item {
+    display: flex;
+    justify-content: space-between;
+    padding: 10px;
+    border-bottom: 1px solid #ccc;
+    margin-bottom: 10px;
+  }
+  
+  .todo-item.completed {
+    text-decoration: line-through;
+    color: #888;
+  }
+  
+  .remove-btn {
+    background-color: #dc3545;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    padding: 5px;
+  }
+  
+  .remove-btn:hover {
+    background-color: #c82333;
+  }
+  
+  /* Tombol selesai dengan kondisi tugas selesai */
+  .completed-btn {
+    background-color: #ffc107;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    padding: 5px;
+  }
+  
+  .completed-btn:hover {
+    background-color: #e0a800;
+  }
+  
+  .completed .completed-btn {
+    background-color: #28a745;
+  }
+  
+  .completed-btn:hover {
+    background-color: #218838;
+  }
+  
+  /* Media query untuk tampilan mobile */
+  @media (max-width: 600px) {
+    #todo-form {
+      flex-direction: column;
+    }
+  
+    button {
+      width: 100%;
+    }
+  }
+  
